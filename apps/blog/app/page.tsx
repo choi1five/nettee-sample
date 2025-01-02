@@ -4,6 +4,8 @@ import Link from "next/link";
 import { postAPI } from "@/lib/api";
 import { ROUTES } from "@/lib/constants/routes";
 
+export const dynamic = "force-dynamic";
+
 export default async function Home() {
   const posts = await postAPI.getAll();
 
