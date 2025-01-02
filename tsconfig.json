@@ -1,4 +1,3 @@
 {
-  "extends": "@workspace/typescript-config/base.json"
+  "extends": "@nettee-sample/typescript-config/base.json"
 }
-

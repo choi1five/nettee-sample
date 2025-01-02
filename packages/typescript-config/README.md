@@ -1,3 +1,3 @@
-# `@workspace/typescript-config`
+# `@nettee-sample/typescript-config`
 
 Shared typescript configuration for the workspace.
