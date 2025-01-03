@@ -5,9 +5,10 @@
 - `main`: 보일러플레이트 제공(corepack ,turborepo, husky, lintstaged, commitlint 등)
 - `feature/sample`: 샘플 코드 제공 (기능 동작 확인용, 점진적 개선 예정)
 
-## API 문서
+## API & 기능 명세 문서
 
 - [api.md](./api.md)
+- [bdd-requirements.md](./bdd-requirements.md)
 
 ## 기술 스택
 
