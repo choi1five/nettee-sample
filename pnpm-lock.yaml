@@ -35,7 +35,7 @@ importers:
         specifier: 5.5.4
         version: 5.5.4
 
-  apps/web:
+  apps/blog:
     dependencies:
       "@nettee-sample/ui":
         specifier: workspace:*
@@ -56,6 +56,12 @@ importers:
         specifier: ^19.0.0
         version: 19.0.0(react@19.0.0)
     devDependencies:
+      "@nettee-sample/eslint-config":
+        specifier: workspace:^
+        version: link:../../packages/eslint-config
+      "@nettee-sample/typescript-config":
+        specifier: workspace:*
+        version: link:../../packages/typescript-config
       "@types/node":
         specifier: ^20
         version: 20.17.10
@@ -65,12 +71,9 @@ importers:
       "@types/react-dom":
         specifier: 18.3.1
         version: 18.3.1
-      "@nettee-sample/eslint-config":
-        specifier: workspace:^
-        version: link:../../packages/eslint-config
-      "@nettee-sample/typescript-config":
-        specifier: workspace:*
-        version: link:../../packages/typescript-config
+      autoprefixer:
+        specifier: ^10.4.20
+        version: 10.4.20(postcss@8.4.49)
       postcss:
         specifier: ^8
         version: 8.4.49
@@ -159,6 +162,12 @@ importers:
         specifier: ^3.23.8
         version: 3.24.1
     devDependencies:
+      "@nettee-sample/eslint-config":
+        specifier: workspace:*
+        version: link:../eslint-config
+      "@nettee-sample/typescript-config":
+        specifier: workspace:*
+        version: link:../typescript-config
       "@turbo/gen":
         specifier: ^2.2.3
         version: 2.3.3(@types/node@22.10.2)(typescript@5.7.2)
@@ -171,12 +180,6 @@ importers:
       "@types/react-dom":
         specifier: 18.3.1
         version: 18.3.1
-      "@nettee-sample/eslint-config":
-        specifier: workspace:*
-        version: link:../eslint-config
-      "@nettee-sample/typescript-config":
-        specifier: workspace:*
-        version: link:../typescript-config
       autoprefixer:
         specifier: ^10.4.20
         version: 10.4.20(postcss@8.4.49)
