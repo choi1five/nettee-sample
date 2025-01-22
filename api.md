@@ -190,3 +190,52 @@ type CreateCommentDTO = Pick<Comment, "content" | "author">;
     comments: Comment[]; // 댓글 목록
   }
   ```
+
+## Paginated Posts API
+
+### 페이지네이션 (Offset)
+
+- **URL**: `/api/posts/paginated`
+- **Method**: `GET`
+- **Query Parameters**:
+  ```typescript
+  {
+    page?: number;    // 페이지 번호 (기본값: 1)
+    limit?: number;   // 페이지당 항목 수 (기본값: 10)
+  }
+  ```
+- **Response**:
+
+  ```typescript
+  {
+    data: Post[];           // 현재 페이지의 게시글 목록
+    currentPage: number;    // 현재 페이지 번호
+    totalPages: number;     // 전체 페이지 수
+    hasMore: boolean;       // 다음 페이지 존재 여부
+  }
+  ```
+
+- ex) /api/posts/infinite?limit=10&cursor=1735801340250
+
+### 무한 스크롤 (Cursor)
+
+- **URL**: `/api/posts/infinite`
+- **Method**: `GET`
+- **Query Parameters**:
+  ```typescript
+  {
+    cursor?: string;   // 마지막 게시글 ID (기본값: '')
+    limit?: number;    // 조회할 항목 수 (기본값: 10)
+  }
+  ```
+- **Response**:
+
+  ```typescript
+  {
+    data: Post[];             // 조회된 게시글 목록
+    nextCursor: string|null;  // 다음 페이지 커서
+    hasMore: boolean;         // 추가 데이터 존재 여부
+  }
+  ```
+
+- ex) /api/posts/paginated?limit=10&page=2
